@@ -1,0 +1,173 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Requi#7510f7 meta tags -->
+    <meta charset="utf-8">
+    <!-- //////////////////// for google fonts ///////////////////// -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'home/css/style.css'%}">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class=" nav_pannel container">
+        <div class="logo">
+            <img src="{% static 'home/photos/logo.svg'%}" style="width: 100%;" alt="Logo">
+        </div>
+        <div class="nav_data">
+            <a href="#" style="border: none; color: black;" onclick="myFunction()">Mentorship</a>
+            <a href="{% url 'contactus'%}" class="hello">Say Hello</a>
+        </div>
+    </div>
+    <div class="data_pannel">
+        <h1>
+            Designer, Front-end Developer & Mentor
+        </h1>
+        <h3>I design and code beautifully simple things, and I love what I do.</h3>
+        <img src="{% static 'home/photos/avtar.svg'%}" alt="avtar" class="avtar">
+        <img src="{% static 'home/photos/map.svg'%}" alt="" class="map">
+    </div>
+
+    <div class="matter">
+        <h2>Hi, I’m Matt. Nice to meet you.</h2>
+        <p>Since beginning my journey as a freelance designer nearly 10 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly
+            confident, naturally curious, and perpetually working on improving my chops one design problem at a time.
+        </p>
+    </div>
+    <div class="services container">
+        <div class="service1">
+            <img src="{% static 'home/photos/designer.svg'%}" alt="">
+            <h3 style="color: black;">Designer</h3>
+            <br>
+            <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+
+            <br>
+            <p style="color: #7510f7;">Things I enjoy designing:</p>
+            <p>UX, UI, Web, Mobile, Apps, Logos</p>
+            <br>
+            <p style="color: #7510f7;">Design Tools:</p>
+            <p>Balsamiq Mockups Figma Invision <br> Marvel Pen & Paper <br> Sketch Webflow Zeplin
+            </p>
+        </div>
+
+        <div class="service1">
+            <img src="{% static 'home/photos/frontend.svg'%}" alt="">
+            <h3 style="color: black;">Front-end Developer</h3>
+            <br>
+            <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+
+            <br>
+            <p style="color: #7510f7;">Things I enjoy designing:</p>
+            <p>UX, UI, Web, Mobile, Apps, Logos</p>
+            <br>
+            <p style="color: #7510f7;">Design Tools:</p>
+            <p>Atom Bitbucket Bootstrap Bulma <br> Codekit Codepen Github <br> Gitlab Terminal
+            </p>
+        </div>
+
+        <div class="service1" style="border: none;">
+            <img src="{% static 'home/photos/mentor.svg'%}" alt="">
+            <h3 style="color: black;">Mentor</h3>
+            <br>
+            <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+
+            <br>
+            <p style="color: #7510f7;">Things I enjoy designing:</p>
+            <p>UX, UI, Web, Mobile, Apps, Logos</p>
+            <br>
+            <p style="color: #7510f7;">Design Tools:</p>
+            <p>
+                5 years experience 26 short courses <br> 42 bootcamps 125+ students 1,400+ mentor sessions <br> 60+ group critiques 12,000+ comments
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="projects ">
+        <h2>My Recent Work</h2>
+        <p>Here are a few design projects I've worked on recently. Want to see more? <strong>Email me.</strong></p>
+        <div class="project_list">
+            <div class="project_items">
+                <img src="{% static 'home/photos/1.png'%}" alt="">
+            </div>
+            <div class="project_items">
+                <img src="{% static 'home/photos/2.png'%}" alt="">
+            </div>
+            <div class="project_items">
+                <img src="{% static 'home/photos/3.png'%}" alt="">
+            </div>
+            <div class="project_items">
+                <img src="{% static 'home/photos/4.png'%}" alt="">
+            </div>
+            <div class="project_items">
+                <img src="{% static 'home/photos/5.png'%}" alt="">
+            </div>
+            <div class="project_items">
+                <img src="{% static 'home/photos/6.png'%}" alt="">
+            </div>
+        </div>
+        <a href="#"><button>See more</button></a>
+    </div>
+    <hr>
+    <div class="intrested container">
+        <h2>Interested in collaborating or investing?</h2>
+        <p>I’m always open to discussing product design work or partnership opportunities.</p>
+        <br>
+        <a href="{% url 'contactus'%}"><button type="button" class="btn btn-outline-primary">Start a
+                conversation</button></a>
+    </div>
+
+    <div class="about_us container">
+        <img src="{% static 'home/photos/self.jpg'%}" alt="Ayush Gupta">
+        <h2>AYUSH GUPTA</h2>
+        <p>“Matt was a real pleasure to work with and we look forward to working with him again. He’s definitely the kind of designer you can trust with a project from start to finish.”</p>
+    </div>
+
+    <div class="lower_nav_upper container">
+        <h2>Start a project</h2>
+        <p>Interested in working together? We should queue up a chat. I’ll buy the coffee.</p>
+        <a href="{% url 'contactus'%}"><button type="button" class="btn btn-outline-primary">Start a
+                conversation</button></a>
+    </div>
+    <div class="loewr_nav">
+        <div class="lower_nav_items">
+            <img src="{% static 'home/photos/logo.png'%}" alt="">
+            <h3>Living, learning, & leveling up one day at a time.</h3>
+            <h4>Devloper:Ayuhs Gupta</h4>
+            <div>
+                <p><img class="finder" src="{% static 'home/photos/phone.png'%}" alt="#">8287794876</p>
+                <p><img class="finder" src="{% static 'home/photos/mail.png'%}" alt="#">ayushguptacomp120@mgil.com</p>
+                <p><img class="finder" src="{% static 'home/photos/location.png'%}" alt="#">Delhi vikas Nagar</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+<script>
+    function myFunction() {
+        alert("Some Feature are still in production face By Ayush Gupta");
+    }
+</script>
+
+</html>

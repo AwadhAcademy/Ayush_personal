@@ -1,0 +1,68 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Requi#7510f7 meta tags -->
+    <meta charset="utf-8">
+    <!-- //////////////////// for google fonts ///////////////////// -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'home/css/style.css'%}">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>contact us</title>
+</head>
+
+<body>
+
+    <div class=" nav_pannel container">
+        <div class="logo">
+            <img src="{% static 'home/photos/logo.svg'%}" style="width: 100%;" alt="Logo">
+        </div>
+        <div class="nav_data">
+            <a href="#" style="border: none; color: black;" onclick="myFunction()">Mentorship</a>
+            <a href="{% url 'home'%}" class="hello">Home</a>
+        </div>
+    </div>
+    <div class="line_img">
+        <hr>
+        <img src="{% static 'home/photos/avtar.svg'%}" alt="AVTART" class="contact_avtar">
+    </div>
+    <h1 class="thanks_message">
+        Thanks for taking the time to reach out. <br> How can I help you today?
+    </h1>
+    <form action="{% url 'home'%}" class="form" method="POST">
+        {% csrf_token %}
+        <div class="col-md-6">
+            <label for="name" class="form-label">Name</label>
+            <input name="name" type="text" class="form-control" placeholder="Name" id="name" name="name">
+        </div>
+        <div class="col-md-6">
+            <label for="site" class="form-label">Email</label>
+            <input name="email" type="email" class="form-control" placeholder="abc@gamil.com" id="site" name="site">
+        </div>
+        <div class="col-12">
+            <label for="site" class="form-label">Phone</label>
+            <input name="phone" type="number" class="form-control" placeholder="+91-1234567890" id="site" name="site">
+        </div>
+        <div class="col-12">
+            <label for="text" class="form-label">Messsage</label>
+            <textarea name="message" class="form-control" placeholder="Messsage" id="text" name="text" rows="3"></textarea>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+    <div style="height: 50vh;"></div>
+</body>
+<script>
+    function myFunction() {
+        alert("Some Feature are still in production face By Ayush Gupta");
+    }
+</script>
+
+</html>
